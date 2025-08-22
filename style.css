@@ -1,0 +1,207 @@
+:root {
+  --primary: #FF7AA2;
+  --secondary: #7A101E;
+  --background: #262626;
+  --text-light: #F8F8F8;
+  --text-muted: #C5C5C5;
+  --highlight: #FFD700;
+}
+
+body{
+  background-color: #1f1f1f;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.navbar .navbar-brand {
+  font-family: "Racing Sans One", sans-serif;
+  font-size: 2rem;
+  color: #FF7AA2;
+}
+
+
+.navbar .nav-link {
+  font-family: "Encode Sans", sans-serif;
+  color: #e0e0e0;
+  margin-right: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  background-color: #7a101e;
+  color: white;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+}
+
+
+.btn-outline-danger {
+  border-color: #FF7AA2;
+  color: #FF7AA2;
+}
+
+
+.btn-outline-danger:hover {
+  background-color: #FF7AA2;
+  color: white;
+}
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  background-image: url("images/background.png");
+}
+
+
+.hero-section h1 {
+  font-size: 9rem;
+  color: #FF7AA2;
+  font-family: "Racing Sans One", sans-serif;
+  line-height: 1.1;
+  text-align:end;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+
+.intro-text {
+  color: #ffffff;
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: center;
+  
+}
+
+
+.intro-text h2 {
+  font-family: "Encode Sans", sans-serif;
+  font-size: 3.5rem;
+  color: #FF7AA2;
+  margin-bottom: 1rem;
+}
+
+
+.intro-text p {
+  font-size: 1.25rem;
+  color: white;
+}
+
+
+.intro-text .btn {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+
+.btn-primary {
+  background-color: #7a101e;
+  border: none;
+}
+
+
+.btn-primary:hover {
+  background-color: #a2152b;
+}
+
+
+.btn-secondary {
+  background-color: #FF7AA2;
+  border: none;
+  color: #1f1f1f;
+}
+
+
+.btn-secondary:hover {
+  background-color: #f76590;
+}
+
+
+.section-title {
+  font-family: "Racing Sans One", sans-serif;
+  color: #ff7aa2;
+  font-size: 3rem;
+
+}
+
+.neon-card {
+  background: #111;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  border: 2px solid #ff7aa2;
+  box-shadow: 0 0 15px rgba(218, 30, 55, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+.neon-card:hover {
+  background: #1a1a1a;
+  transform: translateY(-10px) scale(1.02);
+  border-color: #da1e37;
+  box-shadow: 0 0 20px #da1e37, 0 0 40px #ff7aa2;
+}
+
+.icon i {
+  font-size: 2.8rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ff7aa2;
+}
+
+.feature-title {
+  font-family: "Encode Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 5px rgba(255, 122, 162, 0.6);
+}
+
+.feature-text {
+  color: #c5c5c5;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.faq-section h2 {
+  color: #FF7AA2;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 700;
+}
+
+.accordion-item {
+  background-color: #262626;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.accordion-button {
+  background-color: #333;
+  color: #fff;
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #7a101e;
+  color: #fff;
+}
+
+.accordion-body {
+  color: #C5C5C5;
+  background-color: #1c1c1c;
+}
+
+
+
+
