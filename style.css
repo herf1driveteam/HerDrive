@@ -202,6 +202,15 @@ body{
   background-color: #1c1c1c;
 }
 
+.profile-text{
+  font-family: "Racing Sans One", sans-serif;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  color:#FF7AA2
+}
 
 
 
