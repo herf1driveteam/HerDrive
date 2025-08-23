@@ -1,8 +1,9 @@
 async function fetchProfiles() {
   try {
-    const res = await fetch("/api/profiles");
-    const data = await res.json();
-    renderProfiles(data);
+   fetch('/api/profiles')
+  .then(res => res.json())
+  .then(data => console.log(data));
+  
   } catch (err) {
     console.error("Error fetching profiles:", err);
   }
