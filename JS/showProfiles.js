@@ -1,30 +1,33 @@
-async function fetchProfiles() {
+async function loadProfiles() {
   try {
-   fetch('/api/profiles')
-  .then(res => res.json())
-  .then(data => console.log(data));
-  
+    const res = await fetch('/api/profiles');
+    const profiles = await res.json();
+
+    const container = document.getElementById('profiles-container');
+    container.innerHTML = ""; 
+
+    profiles.forEach(profile => {
+      const col = document.createElement('div');
+      col.className = "col-md-4";
+
+      col.innerHTML = `
+        <div class="card h-100 shadow rounded-3">
+          <img src="${profile.image || 'https://via.placeholder.com/300'}" 
+               class="card-img-top" 
+               alt="${profile.name}">
+          <div class="card-body">
+            <h5 class="card-title">${profile.name}</h5>
+            <p class="card-text"><strong>Nationality:</strong> ${profile.nationality || 'N/A'}</p>
+            <p class="card-text">${profile.bio || ''}</p>
+          </div>
+        </div>
+      `;
+
+      container.appendChild(col);
+    });
   } catch (err) {
-    console.error("Error fetching profiles:", err);
+    console.error("Error loading profiles:", err);
   }
 }
 
-function renderProfiles(data) {
-  const container = document.getElementById("profiles");
-  container.innerHTML = data.map(profile => `
-    <div class="col-md-4 mb-4">
-      <div class="card h-100 shadow-sm">
-        <img src="${profile.image}" class="card-img-top" alt="${profile.name}">
-        <div class="card-body">
-          <h5 class="card-title">${profile.name}</h5>
-          <p class="card-text"><strong>${profile.occupation}</strong></p>
-          <p class="card-text"><em>${profile.nationality}</em></p>
-          <p class="card-text">${profile.bio}</p>
-          <a href="${profile.link}" class="btn btn-primary" target="_blank">Learn More</a>
-        </div>
-      </div>
-    </div>
-  `).join("");
-}
-
-fetchProfiles();
+document.addEventListener("DOMContentLoaded", loadProfiles);
