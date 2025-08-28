@@ -14,7 +14,8 @@ export default async function handler(req, res) {
       nationality: page.properties.Nationality?.rich_text[0]?.plain_text || "",
       bio: page.properties.Bio?.rich_text[0]?.plain_text || "",
       link: page.properties.Link?.url || "#",
-      image: page.properties.Image?.url || "https://via.placeholder.com/150"
+      image: page.properties.Image?.url || "https://via.placeholder.com/150",
+      featured: properties["Featured"]?.checkbox || false
     }));
 
     res.status(200).json(profiles);

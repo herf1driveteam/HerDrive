@@ -221,6 +221,37 @@ body{
   color: #7A101E;
 }
 
+/* Cards */
+.profile-card {
+  transition: transform 0.2s ease-in-out;
+}
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image wrapper for uniform sizing */
+.image-wrapper {
+  width: 100%;
+  height: 250px; /* fixed height */
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps images same size & crops nicely */
+}
+
+/* Learn More button */
+.profile-card .btn {
+  margin-top: 10px;
+  background-color: #d63384;
+  border: none;
+}
+.profile-card .btn:hover {
+  background-color: #a61e63;
+}
 
 
 
