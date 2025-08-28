@@ -202,7 +202,7 @@ body{
   background-color: #1c1c1c;
 }
 
-.profile-text h1{
+.profile-text h1 {
   font-size: 2.8rem;
   font-weight: 700;
   font-family: "Racing Sans One", sans-serif;
@@ -215,7 +215,7 @@ body{
   margin-bottom: 15px;
 }
 
-.profile-text p{
+.profile-text p {
   font-size: 1.2rem;
   font-family: "Encode Sans", sans-serif;
   color: #7A101E;
