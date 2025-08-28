@@ -1,7 +1,11 @@
 async function loadProfiles() {
   try {
+    console.log("Fetching profiles...");
     const res = await fetch('/api/profiles');
+    console.log("Response status:", res.status);
+
     const profiles = await res.json();
+    console.log("Profiles data:", profiles);
 
     const container = document.getElementById('profiles-container');
     container.innerHTML = ""; 
