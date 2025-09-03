@@ -241,6 +241,7 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover; /* keeps images same size & crops nicely */
+  display: block;
 }
 
 /* Learn More button */
@@ -252,6 +253,8 @@ body{
 .profile-card .btn:hover {
   background-color: #a61e63;
 }
+
+
 
 
 
