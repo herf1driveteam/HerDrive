@@ -224,6 +224,9 @@ body{
 /* Cards */
 .profile-card {
   transition: transform 0.2s ease-in-out;
+  background-color:#C5C5C5
+
+
 }
 .profile-card:hover {
   transform: translateY(-5px);
