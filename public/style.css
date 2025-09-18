@@ -257,6 +257,63 @@ body{
   background-color: #a61e63;
 }
 
+/* Share Your Story Section */
+.share-section {
+  color: #f5f5f5;           
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.share-section h2 {
+  font-family: "Racing Sans One", sans-serif;
+  font-size: 3rem;
+  color: #FF7AA2;           
+  margin-bottom: 1rem;
+}
+
+.share-section p {
+  font-family: "Encode Sans", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.share-section strong {
+  color: #FFD700;       
+}
+
+.share-section .btn {
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.share-section .btn-primary {
+  background-color: #DA1E37;
+  border: none;
+}
+
+.share-section .btn-primary:hover {
+  background-color: #FF7AA2;
+  color: #1a1a1a;
+}
+
+.share-section .btn-secondary {
+  background-color: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+}
+
+.share-section .btn-secondary:hover {
+  background-color: #FFD700;
+  color: #1a1a1a;
+}
 
 
 
