@@ -267,14 +267,14 @@ body{
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-.share-section h2 {
+.share-section h1 {
   font-family: "Racing Sans One", sans-serif;
   font-size: 3rem;
   color: #FF7AA2;           
   margin-bottom: 1rem;
 }
 
-.share-section p {
+.share-section h3 {
   font-family: "Encode Sans", sans-serif;
   font-size: 1.25rem;
   line-height: 1.8;
