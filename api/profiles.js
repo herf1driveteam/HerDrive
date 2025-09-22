@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       bio: page.properties.Bio?.rich_text[0]?.plain_text || "",
       link: page.properties.Link?.url || "#",
       image: page.properties.Image?.url || "https://via.placeholder.com/300",
-      featured: page.properties.Featured?.checkbox || false, // ✅ add checkbox
+      featured: page.properties.Featured?.checkbox || false,
     }));
 
     res.status(200).json(profiles);
