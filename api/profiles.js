@@ -15,9 +15,7 @@ export default async function handler(req, res) {
       nationality: page.properties.Nationality?.rich_text?.[0]?.plain_text || "",
       bio: page.properties.Bio?.rich_text?.[0]?.plain_text || "",
       link: page.properties.Link?.url || "#",
-      image: page.properties.Image?.files?.[0]?.file?.url
-      || page.properties.Image?.files?.[0]?.external?.url
-      || "https://via.placeholder.com/300",
+      image: page.properties.Image?.url || "https://via.placeholder.com/300",
       featured: page.properties.Featured?.checkbox || false,
     }));
 
