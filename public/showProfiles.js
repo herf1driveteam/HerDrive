@@ -8,7 +8,6 @@ async function loadProfiles() {
       return;
     }
 
-    // ✅ only take featured ones
     const featuredProfiles = profiles.filter(p => p.featured);
 
     const container = document.getElementById('profiles-container');
