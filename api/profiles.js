@@ -16,8 +16,8 @@ export default async function handler(req, res) {
       bio: page.properties.Bio?.rich_text?.[0]?.plain_text || "",
       link: page.properties.Link?.url || "#",
       image: page.properties.Image?.files?.[0]?.file?.url
-            || page.properties.Image?.files?.[0]?.external?.url
-            || "https://via.placeholder.com/300",
+      || page.properties.Image?.files?.[0]?.external?.url
+      || "https://via.placeholder.com/300",
       featured: page.properties.Featured?.checkbox || false,
     }));
 
