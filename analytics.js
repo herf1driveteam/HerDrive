@@ -4,7 +4,7 @@ const GA_MEASUREMENT_ID = "G-59HRMKGDVT";
 (function() {
   const gtagScript = document.createElement('script');
   gtagScript.async = true;
-  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=G-59HRMKGDVT`;
   document.head.appendChild(gtagScript);
 
   window.dataLayer = window.dataLayer || [];
