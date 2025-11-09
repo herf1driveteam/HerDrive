@@ -16,9 +16,10 @@ export default async function handler(req, res) {
 
     const data = await response.json();
 
+    // 👇 use correct field casing from Airtable
     const stories = data.records.map(record => ({
       id: record.id,
-      Name: record.fields.name || "Unknown",
+      name: record.fields.Name || "Unknown",
       nationality: record.fields.Nationality || "—",
       story: record.fields.Story || "",
       image: record.fields.Image && record.fields.Image.length > 0 
@@ -27,7 +28,6 @@ export default async function handler(req, res) {
     }));
 
     res.status(200).json(stories);
-
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Failed to fetch Airtable data" });
