@@ -10,11 +10,15 @@ async function displayStories() {
 
   container.innerHTML = ""; // Clear existing cards if reloaded
 
-  stories.forEach((story) => {
-    const name = story.name || "Anonymous";
-    const nationality = story.nationality || "";
-    const storyText = story.story || "";
-    const imageUrl = fields.Image && fields.Image.length > 0 ? fields.Image[0].url : null;
+  records.forEach((record) => {
+    if (!record.fields) return; // skip if no fields
+
+    const { Name, Nationality, Story, Image } = record.fields;
+    const name = Name || "Anonymous";
+    const nationality = Nationality || "";
+    const story = Story || "";
+    const imageUrl = Image && Image.length > 0 ? Image[0].url : "default-image.jpg";
+
 
     const card = document.createElement("div");
     card.classList.add("story-card");
