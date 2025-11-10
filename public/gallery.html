@@ -19,6 +19,8 @@
 
 
   <link rel="stylesheet" href="/style.css"> 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://v5.airtableusercontent.com; script-src 'self'; style-src 'self' 'unsafe-inline';">
+
 
 
 </head>
@@ -63,11 +65,18 @@
   </div>
 -->
 
-  <section id="stories-carousel" class="carousel-container">
-  <!-- Cards will be inserted here dynamically -->
-  </section>
+  <section class="stories-section">
+  <h2 class="stories-header">Community Stories</h2>
 
-  <script src="stories.js"></script>
+  <div class="carousel-wrapper">
+    <button id="scroll-left" class="scroll-btn">&#8249;</button>
+    <div id="stories-carousel" class="stories-carousel"></div>
+    <button id="scroll-right" class="scroll-btn">&#8250;</button>
+  </div>
+</section>
+
+<script type="module" src="/stories.js"></script>
+
 
 
 
