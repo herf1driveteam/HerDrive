@@ -462,7 +462,6 @@ body{
 }
 
 .scroll-btn {
-  background-color: #e40046;
   border: none;
   color: white;
   font-size: 2rem;
@@ -470,10 +469,6 @@ body{
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.2s;
-}
-
-.scroll-btn:hover {
-  background-color: #c2003a;
 }
 
 #scroll-left {
