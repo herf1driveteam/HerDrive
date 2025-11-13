@@ -426,7 +426,7 @@ body{
 }
 
 .story-card {
-  flex: 0 0 300px;
+  flex: 0 0 500px;
   background: white;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
