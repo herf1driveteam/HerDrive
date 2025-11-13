@@ -16,23 +16,16 @@ export default async function handler(req, res) {
 
     const data = await response.json();
 
-    // Map and filter records
-    const stories = data.records
-      .map(record => {
-        const fields = record.fields;
+    const stories = data.records.map(record => ({
+      id: record.id,
+      Name: record.fields.Name || "Unknown",   // capitalized Name
+      nationality: record.fields.Nationality || "—",
+      story: record.fields.Story || "",
+      image: record.fields.Image && record.fields.Image.length > 0 
+              ? record.fields.Image[0].url 
+              : null
+    }));
 
-        // Skip if no image field or empty
-        if (!fields.Image || fields.Image.length === 0) return null;
-
-        return {
-          id: record.id,
-          name: fields.Name || "Unknown",
-          nationality: fields.Nationality || "—",
-          story: fields.Story || "",
-          image: fields.Image[0].url, // ✅ Actual image URL from Airtable
-        };
-      })
-      .filter(story => story !== null); // Remove any skipped nulls
 
     res.status(200).json(stories);
   } catch (err) {

@@ -1,49 +1,51 @@
+// stories.js
+
 async function fetchStories() {
   const response = await fetch("/api/stories");
-  const stories = await response.json();
-  return stories;
+  if (!response.ok) {
+    console.error("Failed to fetch stories:", response.status);
+    return [];
+  }
+  const records = await response.json();
+  return records;
 }
 
 async function displayStories() {
   const container = document.getElementById("stories-carousel");
-  const stories = await fetchStories();
+  if (!container) {
+    console.error("No container with ID 'stories-carousel' found.");
+    return;
+  }
 
-  container.innerHTML = ""; // Clear existing cards if reloaded
+  const records = await fetchStories();
+
+  if (!records || records.length === 0) {
+    container.innerHTML = "<p>No stories available yet.</p>";
+    return;
+  }
 
   records.forEach((record) => {
-    if (!record.fields) return; // skip if no fields
+    // Make sure record fields exist
+    const name = record.Name || "Anonymous";
+    const nationality = record.nationality || "—";
+    const story = record.story || "";
+    const imageUrl = record.image ? record.image : "default-image.jpg";
 
-    const { Name, Nationality, Story, Image } = record.fields;
-    const name = Name || "Anonymous";
-    const nationality = Nationality || "";
-    const story = Story || "";
-    const imageUrl = Image && Image.length > 0 ? Image[0].url : "default-image.jpg";
-
-
+    // Create card element
     const card = document.createElement("div");
     card.classList.add("story-card");
-
     card.innerHTML = `
       ${imageUrl ? `<img src="${imageUrl}" alt="${name}" />` : ""}
-      <h3>${name}</h3>
-      <p><strong>${nationality}</strong></p>
-      <p>${story}</p>
+      <div class="story-content">
+        <h3>${name}</h3>
+        <p><strong>${nationality}</strong></p>
+        <p>${story}</p>
+      </div>
     `;
-
 
     container.appendChild(card);
   });
 }
 
+// Run display function
 displayStories();
-
-const scrollLeft = document.getElementById("scroll-left");
-const scrollRight = document.getElementById("scroll-right");
-const carousel = document.getElementById("stories-carousel");
-
-scrollLeft.addEventListener("click", () => {
-  carousel.scrollBy({ left: -300, behavior: "smooth" });
-});
-scrollRight.addEventListener("click", () => {
-  carousel.scrollBy({ left: 300, behavior: "smooth" });
-});
