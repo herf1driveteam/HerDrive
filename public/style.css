@@ -388,6 +388,8 @@ body{
     transform: scale(1.05);
   }
 }
+
+/*
 .stories-wrapper {
   position: relative;
   width: 100%;
@@ -400,7 +402,7 @@ body{
   scroll-behavior: smooth;
   gap: 1.5rem;
   padding: 1rem;
-  scrollbar-width: none; /* hides scroll bar */
+  scrollbar-width: none; hides scroll bar
 }
 
 .stories-container::-webkit-scrollbar {
@@ -426,7 +428,7 @@ body{
 }
 
 .scroll-btn:hover {
-  background: #ff0066; /* your accent color */
+  background: #ff0066; 
   color: #fff;
   transform: translateY(-50%) scale(1.1);
 }
@@ -442,8 +444,8 @@ body{
 .scroll-btn i {
   font-size: 1.2rem;
 }
+*/
 
-/*
 .stories-section {
   text-align: center;
   padding: 50px 20px;
@@ -534,7 +536,7 @@ body{
   position: absolute;
   right: 20px;
 }
-*/
+
 
 
 
