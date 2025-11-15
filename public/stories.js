@@ -49,3 +49,16 @@ async function displayStories() {
 
 // Run display function
 displayStories();
+
+const scrollContainer = document.getElementById("stories-carousel");
+const scrollLeftBtn = document.getElementById("scrollLeft");
+const scrollRightBtn = document.getElementById("scrollRight");
+
+scrollLeftBtn.addEventListener("click", () => {
+  scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+});
+
+scrollRightBtn.addEventListener("click", () => {
+  scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+});
+
