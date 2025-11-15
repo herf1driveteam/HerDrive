@@ -65,7 +65,32 @@
     <div class="coming-soon-badge">Coming Soon 🚧</div>
   </div>
 -->
+  <div class="stories-wrapper">
+    <button class="scroll-btn left" id="scrollLeft">
+      <i class="bi bi-chevron-left"></i>
+    </button>
 
+    <div class="stories-container" id="stories-carousel"></div>
+
+    <button class="scroll-btn right" id="scrollRight">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  </div>
+
+  const scrollContainer = document.getElementById("stories-carousel");
+  const scrollLeftBtn = document.getElementById("scrollLeft");
+  const scrollRightBtn = document.getElementById("scrollRight");
+
+  scrollLeftBtn.addEventListener("click", () => {
+    scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+  });
+
+  scrollRightBtn.addEventListener("click", () => {
+    scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
+  });
+
+
+  <!--
   <section class="stories-section">
   <h2 class="stories-header">Community Stories</h2>
 
@@ -75,6 +100,8 @@
     <button id="scroll-right" class="scroll-btn">&#2850;</button>
   </div>
 </section>
+-->
+
 
 <script type="module" src="/stories.js"></script>
 

@@ -388,7 +388,62 @@ body{
     transform: scale(1.05);
   }
 }
+.stories-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 
+.stories-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem;
+  scrollbar-width: none; /* hides scroll bar */
+}
+
+.stories-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.scroll-btn:hover {
+  background: #ff0066; /* your accent color */
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.scroll-btn i {
+  font-size: 1.2rem;
+}
+
+/*
 .stories-section {
   text-align: center;
   padding: 50px 20px;
@@ -479,8 +534,7 @@ body{
   position: absolute;
   right: 20px;
 }
-
-
+*/
 
 
 
