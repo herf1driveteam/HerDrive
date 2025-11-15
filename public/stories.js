@@ -29,11 +29,14 @@ async function displayStories() {
     const name = record.Name || "Anonymous";
     const nationality = record.nationality || "—";
     const story = record.story || "";
-    const imageUrl = record.image ? record.image : "default-image.jpg";
+    const imageUrl = record.image;
 
-    // Create card element
     const card = document.createElement("div");
     card.classList.add("story-card");
+     const imageSection = imageUrl
+      ? `<img src="${imageUrl}" alt="${name}" class="story-img" />`
+      : `<div class="story-placeholder"></div>`;
+      
     card.innerHTML = `
       ${imageUrl ? `<img src="${imageUrl}" alt="${name}" />` : ""}
       <div class="story-content">

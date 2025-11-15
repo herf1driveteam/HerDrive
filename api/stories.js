@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
     const stories = data.records.map(record => ({
       id: record.id,
-      Name: record.fields.Name || "Unknown",   // capitalized Name
+      Name: record.fields.Name || "Unknown", 
       nationality: record.fields.Nationality || "—",
       story: record.fields.Story || "",
       image: record.fields.Image && record.fields.Image.length > 0 
