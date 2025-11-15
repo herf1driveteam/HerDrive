@@ -7,7 +7,7 @@
 }
 
 :root {
-  --primary: var(--primary);
+  --primary: #FF7AA2;
   --secondary: #DA1E37;
   --background: #262626;
   --text-light: #F8F8F8;
