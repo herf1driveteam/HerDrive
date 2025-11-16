@@ -471,13 +471,11 @@ body{
   font-family: "Encode Sans", sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
-  color: #555;                    
+  color: var(--secondary);                    
   text-align: center;
   margin-top: -10px;
   margin-bottom: 25px;
   letter-spacing: 0.3px;
-  
-  /* subtle underline accent */
   position: relative;
   padding-bottom: 8px;
 }
@@ -494,7 +492,6 @@ body{
 
 
 .carousel-wrapper {
-  display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -507,7 +504,6 @@ body{
   scroll-behavior: smooth;
   scrollbar-width: none;
   padding: 10px;
-  width: 80%;
 }
 
 .stories-carousel::-webkit-scrollbar {
