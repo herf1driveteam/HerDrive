@@ -25,7 +25,6 @@ async function displayStories() {
   }
 
   records.forEach((record) => {
-    // Make sure record fields exist
     const name = record.Name || "Anonymous";
     const nationality = record.nationality || "—";
     const story = record.story || "";

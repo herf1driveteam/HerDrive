@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   const TABLE_NAME = "BackgroundStories";
 
   try {
-    const response = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`, {
+    const response = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}?filterByFormula={Status}="true"`, {
       headers: {
         Authorization: `Bearer ${AIRTABLE_API_KEY}`,
       },
