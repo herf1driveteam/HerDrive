@@ -395,16 +395,14 @@ body{
   }
 }
 
-/* ===== carousel wrapper - controls layout and height ===== */
 .carousel-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 20px 0; /* space above/below cards */
+  padding: 20px 0;
 }
 
-/* ===== the horizontal scroller itself ===== */
 .stories-carousel {
   display: flex;                
   gap: 20px;                 
@@ -414,7 +412,7 @@ body{
   box-sizing: border-box;
   scroll-behavior: smooth;
   align-items: stretch;       
-  -webkit-overflow-scrolling: touch; /* smooth on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 .stories-carousel::-webkit-scrollbar {
@@ -435,6 +433,38 @@ body{
 .stories-carousel {
   scrollbar-width: thin;
   scrollbar-color: var(--primary) #f3f3f3;
+}
+
+.stories-header {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.stories-subheader {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  color: #555;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.45;
+}
+
+/* optional: small accent underline under main header */
+.stories-header::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff4f80; /* your F1 pink shade */
+  margin: 10px auto 0;
+  border-radius: 3px;
 }
 
 .story-card {
@@ -482,8 +512,4 @@ body{
   .story-card .story-img, .story-placeholder { height: 150px; }
   .stories-carousel { gap: 14px; padding: 8px; }
 }
-
-
-
-
 
