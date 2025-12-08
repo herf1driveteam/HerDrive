@@ -439,7 +439,7 @@ body{
   font-size: 2rem;
   font-weight: 700;
   margin: 0 0 6px 0;
-  color: var(--secondary);
+  color: var(--nuetral);
   letter-spacing: -0.5px;
   text-align: center;
 }
