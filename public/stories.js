@@ -39,7 +39,7 @@ async function displayStories() {
     card.innerHTML = `
       ${imageUrl ? `<img src="${imageUrl}" alt="${name}" />` : ""}
       <div class="story-content">
-        <h3>${name}</h3>
+        <h2>${name}</h2>
         <p><strong>${nationality}</strong></p>
         <p>${story}</p>
       </div>
