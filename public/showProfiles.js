@@ -15,7 +15,7 @@ async function loadProfiles() {
 
     featuredProfiles.forEach(profile => {
       const col = document.createElement('div');
-      col.className = "col-md-4";
+      col.className = "col-md-3";
 
       col.innerHTML = `
         <div class="card h-100 shadow rounded-3 profile-card">

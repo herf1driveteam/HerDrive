@@ -406,18 +406,17 @@ body{
 
 /* ===== the horizontal scroller itself ===== */
 .stories-carousel {
-  display: flex;                /* horizontal flow */
-  gap: 20px;                    /* space between cards */
-  overflow-x: auto;             /* enables horizontal scroll */
-  overflow-y: hidden;           /* no vertical scroll */
-  padding: 10px;                /* inside spacing so scrollbar doesn't overlap cards */
+  display: flex;                
+  gap: 20px;                 
+  overflow-x: auto;           
+  overflow-y: hidden;          
+  padding: 10px;                
   box-sizing: border-box;
   scroll-behavior: smooth;
-  align-items: stretch;         /* keep cards same height */
+  align-items: stretch;       
   -webkit-overflow-scrolling: touch; /* smooth on iOS */
 }
 
-/* ===== scrollbar styling (Chrome, Edge, Safari) ===== */
 .stories-carousel::-webkit-scrollbar {
   height: 10px;
 }
@@ -433,17 +432,15 @@ body{
   background: #ff4f80;
 }
 
-/* Firefox scrollbar */
 .stories-carousel {
   scrollbar-width: thin;
-  scrollbar-color: #ff7aa2 #f3f3f3;
+  scrollbar-color: var(--primary) #f3f3f3;
 }
 
-/* ===== card sizing + preventing squish ===== */
 .story-card {
-  flex: 0 0 300px;             /* don't shrink/grow; fixed width */
-  min-width: 260px;            /* safe fallback */
-  max-width: 340px;            /* prevents super-wide cards */
+  flex: 0 0 300px;           
+  min-width: 340px;       
+  max-width: 400px;          
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -453,27 +450,25 @@ body{
   box-sizing: border-box;
 }
 
-/* ensures card content fills card and doesn't compress image */
 .story-card .story-img,
 .story-placeholder {
   width: 100%;
-  height: 180px;               /* consistent image area height */
+  height: 180px;             
   object-fit: cover;
   display: block;
 }
 
-/* body content area inside card */
 .story-content {
   padding: 14px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex: 1 1 auto;              /* allow content area to grow, keep whole card balanced */
+  flex: 1 1 auto;              
 }
 
-/* typography smaller and compact to avoid giant cards */
 .story-content h3 {
   margin: 0;
+  color: var(--primary);
   font-size: 1.125rem;
 }
 .story-content p {
@@ -482,7 +477,6 @@ body{
   color: #333;
 }
 
-/* optional responsive tweaks */
 @media (max-width: 768px) {
   .story-card { flex: 0 0 260px; }
   .story-card .story-img, .story-placeholder { height: 150px; }
